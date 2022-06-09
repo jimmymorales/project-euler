@@ -1,5 +1,3 @@
-import kotlin.math.sqrt
-
 /**
  * Largest palindrome product
  *
@@ -11,23 +9,36 @@ import kotlin.math.sqrt
  */
 
 fun main() {
-    val upper = 999 * 999
-    val lower = 100 * 100
-    for (n in upper downTo lower) {
-        if (n.isPalindrome) {
-            val sqr = sqrt(n.toDouble()).toInt().coerceAtMost(999)
-            for (f in sqr downTo 100) {
-                if (n % f == 0) {
-                    val f2 = n / f
-                    if (f2 in 100..999) {
-                        println(n)
-                    }
-                }
-            }
-        }
-    }
-    arrayOf<Int>().reverse()
+    println(largestPalindrome())
 }
 
-val Int.isPalindrome: Boolean get() = this == toString().reversed().toInt()
+fun largestPalindrome(): Int {
+    var largestPalindrome = 0
+    for (a in 999 downTo 100) {
+        var b = 999
+        while (b >= a) {
+            val p = a * b
+            if (p <= largestPalindrome) {
+                break // since p is always going to be small
+            }
+            if (p.isPalindrome) {
+                largestPalindrome = p
+            }
+            b--
+        }
+    }
+    return largestPalindrome
+}
+
+val Int.isPalindrome: Boolean get() = this == reverse()
+
+fun Int.reverse(): Int {
+    var num = this
+    var reversed = 0
+    while (num > 0) {
+        reversed = (10 * reversed) + (num % 10)
+        num /= 10
+    }
+    return reversed
+}
 
