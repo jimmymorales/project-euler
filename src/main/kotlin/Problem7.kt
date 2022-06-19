@@ -38,6 +38,7 @@ private fun findPrime1(n: Int): Long {
 }
 
 fun findPrime(n: Int): Long {
+    if (n == 1) return 2
     var count = 1
     var candidate = 1L
     do {
