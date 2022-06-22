@@ -32,6 +32,7 @@ private fun longestCollatzSequence(max: Int): Int {
             answer = n
         }
     }
+    max.countLeadingZeroBits()
     return answer
 }
 
