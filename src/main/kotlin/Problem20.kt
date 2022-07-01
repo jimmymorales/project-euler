@@ -9,6 +9,8 @@ import java.math.BigInteger
  * and the sum of the digits in the number 10! is 3 + 6 + 2 + 8 + 8 + 0 + 0 = 27.
  *
  * Find the sum of the digits in the number 100!
+ *
+ * https://projecteuler.net/problem=20
  */
 fun main() {
     println(factorialDigitSum(10))

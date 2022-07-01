@@ -43,7 +43,7 @@ private fun highlyDivisibleTriangularNumber(n: Int): Int {
     }
 }
 
-private fun primeFactorizationOf(n: Int): Map<Int, Int> = buildMap {
+fun primeFactorizationOf(n: Int): Map<Int, Int> = buildMap {
     var num = n
     while (num != 1) {
         primeLoop@ for (i in 1..n) {
