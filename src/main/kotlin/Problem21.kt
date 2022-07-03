@@ -17,8 +17,8 @@ import kotlin.math.sqrt
  */
 
 fun main() {
-    println(sumOfProperDivisors(220))
-    println(sumOfProperDivisors(284))
+    println(220.sumOfProperDivisors())
+    println(284.sumOfProperDivisors())
     println(sumOfAmicables(10_000))
 }
 
@@ -27,8 +27,8 @@ private fun sumOfAmicables(n: Int): Int {
     val amicables = mutableSetOf<Int>()
     for (a in 2 until n) {
         if (a in amicables) continue
-        val b = sumOfProperDivisors(a)
-        if (b > a && a == sumOfProperDivisors(b)) {
+        val b = a.sumOfProperDivisors()
+        if (b > a && a == b.sumOfProperDivisors()) {
             sum += a + b
             amicables.add(b)
         }
@@ -36,25 +36,25 @@ private fun sumOfAmicables(n: Int): Int {
     return sum
 }
 
-private fun sumOfProperDivisors(n: Int): Int {
+fun Int.sumOfProperDivisors(): Int {
     var sum = 1
     var start = 2
     var step = 1
 
-    var r = floor(sqrt(n.toDouble())).toInt()
-    if (r * r == n) {
+    var r = floor(sqrt(toDouble())).toInt()
+    if (r * r == this) {
         sum += r
         r--
     }
 
-    if (n % 2 != 0) {
+    if (this % 2 != 0) {
         start = 3
         step = 2
     }
 
     for (i in start..r step step) {
-        if (n % i == 0) {
-            sum += i + (n / i)
+        if (this % i == 0) {
+            sum += i + (this / i)
         }
     }
     return sum
