@@ -20,6 +20,8 @@ import java.util.Comparator
  * cycle.
  *
  * Find the value of d < 1000 for which 1/d contains the longest recurring cycle in its decimal fraction part.
+ *
+ * https://projecteuler.net/problem=26
  */
 fun main() {
     println(2.countRepeatingDecimalsInUnitFraction())
