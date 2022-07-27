@@ -49,7 +49,7 @@ private fun isMultiplicationPandigital(multiplicand: Int, multiplier: Int, produ
 	return digitsFlags == 511
 }
 
-private fun Int.digits(): List<Int> = buildList {
+fun Int.digits(): List<Int> = buildList {
 	var num = this@digits
 	while (num != 0) {
 		add(num % 10)
