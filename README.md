@@ -50,3 +50,4 @@ to raise an issue for any comment or advice you have, it will be highly apprecia
 31. [Coin sums](src/main/kotlin/Problem31.kt)
 32. [Pandigital products](src/main/kotlin/Problem32.kt)
 33. [Digit cancelling fractions](src/main/kotlin/Problem33.kt)
+34. [Digit factorials](src/main/kotlin/Problem34.kt)
