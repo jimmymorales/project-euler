@@ -55,4 +55,5 @@ fun Int.digits(): List<Int> = buildList {
 		add(num % 10)
 		num /= 10
 	}
+	reverse()
 }
