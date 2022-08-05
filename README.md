@@ -53,3 +53,4 @@ to raise an issue for any comment or advice you have, it will be highly apprecia
 34. [Digit factorials](src/main/kotlin/Problem34.kt)
 35. [Circular primes](src/main/kotlin/Problem35.kt)
 36. [Double-base palindromes](src/main/kotlin/Problem36.kt)
+37. [Truncatable primes](src/main/kotlin/Problem37.kt)
